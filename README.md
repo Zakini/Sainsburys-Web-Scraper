@@ -9,7 +9,7 @@ Required libraries (as listed in `requirements.txt`) are:
 
 ## Usage
 Run `main.py` followed by the URL to scrape
-> python main.py http://www.exa&#58;mple.com
+> python main.py http&#58;//www.example.com
 The resulting JSON string will be printed to stdout
 
 To run unit tests, run the standard python `unittest` command in the `tests` directory
