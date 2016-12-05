@@ -26,11 +26,15 @@ def scrape(targetUrl):
     infoObj = [convertToKeyInfo(el) for el in keyElements]
     infoObj = summarise(infoObj)
     jsonString = json.dumps(infoObj)
-    print(jsonString)
+    return jsonString
 
 
 def convertToKeyInfo(element):
     """Convert a HTML element into a dictionary of relevant info"""
+    if element.get("class") != "productInner":
+        raise ValueError("Invalid argument: element does not appear to contain"
+                         " product information")
+
     infoObj = {}
     linkElement = element.cssselect("a")[0]
 

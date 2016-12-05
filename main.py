@@ -7,7 +7,9 @@ def main():
         print("Error: expected URL")
         exit(1)
     targetUrl = argv[1]
-    scrape(targetUrl)   # TODO catch exceptions
+
+    print(scrape(targetUrl))
+
     exit(0)
 
 
